@@ -35,11 +35,18 @@ const onChangePw = function (event) {
     .catch(ui.changePwFailure)
 }
 
+const onSignOut = function () {
+  event.preventDefault()
+  api.signOut()
+    .then(ui.signOutSuccess)
+    .catch(ui.signOutFailure)
+}
+
 const addHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#change-pw').on('submit', onChangePw)
-  // $('#logout').on('sumbit', onLogout)
+  $('#signOut').on('sumbit', onSignOut)
 }
 
 module.exports = {

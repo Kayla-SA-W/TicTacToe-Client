@@ -8,6 +8,8 @@ const authEvents = require('./auth/auth-events')
 // require('./example')
 
 $(() => {
+  $('#signOut').hide()
+  $('#change-pw').hide()
   gameEvents.addHandlers()
   authEvents.addHandlers()
 })
