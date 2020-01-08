@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kayla Williams Tic Tac Toe Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <h1>Tic Tac Toe</h1>
+  <p id='signUpMessage'></p>
+  <form id='sign-up'>
+    <fieldset>
+      <legend> Sign Up! </legend>
+      <input name='credentials[email]' type='email' placeholder='Email' />
+      <input name='credentials[password]' type='password' placeholder='Password' />
+      <input name='credentials[password_confirmation]' type='password' placeholder='Password Confirmation' />
+      <input type='submit' value='Sign Up!' />
+    </fieldset>
+  </form>
+  <p id='signInMessage'></p>
+  <form id='sign-in'>
+    <fieldset>
+      <legend> Sign In! </legend>
+      <input name='credentials[email]' type='email' placeholder='Email' />
+      <input name='credentials[password]' type='password' placeholder='Password' />
+      <input type='submit' value='Sign In!' />
+    </fieldset>
+  </form>
+  <p id='pwChangeMessage'></p>
+  <form id='change-pw'>
+    <fieldset>
+      <legend>Change Password</legend>
+      <input name='passwords[old]' type='password' placeholder='Old Password' />
+      <input name='passwords[new]' type='password' placeholder='New Password' />
+      <input type='submit' value='Change Password' />
+    </fieldset>
+  </form>
+  <p id='logoutMessage'></p>
+  <form id='logout'>
+    <fieldset>
+      <legend>Sign Out</legend>
+      <input type='submit' value='Logout' />
+    </fieldset>
+  </form>
+
+  <div class="container" id="gameBoard">
+    <h2 id='gameMessage'> Start Game </h2>
+    <div class="row">
+      <div class="col-4 box" id="spaceZero" data-cell-index='0'> </div>
+      <div class="col-4 box" id="spaceOne"> </div>
+      <div class="col-4 box" id="spaceTwo"> </div>
+      <div class="col-4 box" id="spaceThree"> </div>
+      <div class="col-4 box" id="spaceFour"> </div>
+      <div class="col-4 box" id="spaceFive"> </div>
+      <div class="col-4 box" id="spaceSix"> </div>
+      <div class="col-4 box" id="spaceSeven"> </div>
+      <div class="col-4 box" id="spaceEight"> </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-outline-dark text-center" id="gameStarter"> Start New Game </button>
+  <button type="button" class="btn btn-outline-dark text-center" id="pastGames"> Show Past Games </button>
+  <p id='quick-test'> </p>
+
+  <section id="content"> </section>
+  <div id="messages"> </div>
+
+</body>
+
+</html>
